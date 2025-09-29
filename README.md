@@ -30,10 +30,11 @@
 ├── main.js              # Entrypoint, khởi động server + bot
 ├── package.json
 ├── .env.example         # File mẫu config
-├── routes/
-│   └── payment.js       # Xử lý webhook /hooks/payment
+├── controller/
+│   └── getPayment.js    # Xử lý webhook /hooks/payment
+│   └── botCommand.js    # Xử lí command telegram
 └── utils/
-    └── formatMessage.js # Format thông báo Telegram
+    └── formatPaymentNotification.js # Format thông báo Telegram
 ```
 
 ---
