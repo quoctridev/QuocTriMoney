@@ -17,7 +17,12 @@ export function botCommand() {
   if (botInstance) return botInstance;
 
   const bot = new Telegraf(BOT_TOKEN);
-
+  bot.telegram.setMyCommands([
+    { command: "trogiup", description: "Hướng dẫn sử dụng bot"},
+    { command: "nap", description: "Nạp tiền vào quỹ" },
+    { command: "rut", description: "Rút tiền khỏi quỹ" },
+    { command: "tongtien", description: "Xem tổng số dư hiện tại" },
+  ]);
   bot.start((ctx) => {
     ctx.reply([
       "Sổ quỹ tối giản đang chạy.",
